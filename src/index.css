@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,78 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+.App{
+  padding-right: 100px;
+  padding-bottom: 100px;
+}
+
+body {
+  color: #222;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  margin: 0 50px;
+}
+
+.react-draggable, .cursor {
+  cursor: move;
+}
+.no-cursor {
+  cursor: auto;
+}
+.cursor-y {
+  cursor: ns-resize;
+}
+.cursor-x {
+  cursor: ew-resize;
+}
+
+.react-draggable strong {
+  background: #ddd;
+  border: 1px solid #999;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.box {
+  /* background: #fff; */
+  border: 1px solid #999;
+  border-radius: 3px;
+  width: 100%;
+  min-height: 180px;
+  display: block;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  padding: 10px;
+  float: left;
+}
+.boxHead{
+  border: 1px solid #999;
+  border-radius: 3px;
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  align-content: center;
+}
+
+/*
+ * RemWrapper needs to take it's styles from this element,
+ * and this element can't have an absolute position after it's kicked in.
+ * AFAIK it's not possible to do this directly in the RemWrapper component.
+ */
+.rem-position-fix {
+  position: static !important;
 }
